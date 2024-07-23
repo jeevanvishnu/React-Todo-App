@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+  .todo-row:nth-child(4n+1) {
+    @apply bg-custom-gradient-1;
+  }
+  
+  .todo-row:nth-child(4n+2) {
+    @apply bg-custom-gradient-2;
+  }
+  
+  .todo-row:nth-child(4n+3) {
+    @apply bg-custom-gradient-3;
+  }
+  
+  .todo-row:nth-child(4n+4) {
+    @apply bg-gradient-to-tr from-cyan-500 to-teal-400;
+  }
+  
+  .todo-row:nth-child(4n+5) {
+    @apply bg-gradient-to-r from-amber-500 to-amber-500;
+  }
+  
+}

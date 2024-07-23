@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 @layer components{
-  .todo-row:nth-child(4n+1) {
+  .todo-row:nth-child(2n+1) {
     @apply bg-custom-gradient-1;
   }
   
-  .todo-row:nth-child(4n+2) {
+  .todo-row:nth-child(2n+2) {
     @apply bg-custom-gradient-2;
   }
   
-  .todo-row:nth-child(4n+3) {
+  .todo-row:nth-child(2n+3) {
     @apply bg-custom-gradient-3;
   }
   

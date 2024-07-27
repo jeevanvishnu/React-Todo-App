@@ -35,7 +35,7 @@ function App() {
   const checkToggle = (id) => {
     let newTodos = todos.map(todo => {
       if (id === todo.id) {
-          todo.checked = !todo.checked 
+        todo.checked = !todo.checked
       }
       return todo
     })
@@ -45,29 +45,29 @@ function App() {
   const deleteToggle = (id) => {
     let newTodos = todos.map(todo => {
       if (id === todo.id) {
-        todo.deleted = !todo.deleted 
+        todo.deleted = !todo.deleted
       }
       return todo
     })
     setTodos(newTodos)
   }
-   
-  const editTodos = async (id) =>{
-    const {value:editTask} =await Swal.fire({
-      title:'Rename Task',
-      input:'text',
-      inputValue:todos.find((todo)=>todo.id === id).text,
-      inputPlaceholder:'Enter here'
+
+  const editTodos = async (id) => {
+    const { value: editTask } = await Swal.fire({
+      title: 'Rename Task',
+      input: 'text',
+      inputValue: todos.find((todo) => todo.id === id).text,
+      inputPlaceholder: 'Enter here'
     })
 
-    if(editTask){
-      let newTodos = todos.filter((todo)=>{
-       if(todo.id === id){
-        todo.text=editTask
-        
-       }
+    if (editTask) {
+      let newTodos = todos.filter((todo) => {
+        if (todo.id === id) {
+          todo.text = editTask
+
+        }
         return todo
-       })
+      })
       setTodos(newTodos)
     }
   }
@@ -76,9 +76,9 @@ function App() {
     <div>
       <h1 className='text-[50px] text-white text-center mt-10 '>Jeevan Todo App</h1>
       <div className='max-[936px]:flex-col max-[936px]:justify-center max-[936px]:items-center flex-wrap flex justify-evenly'>
-        <Todo addNewTask={addNewTask} todos={todos} checkToggle={checkToggle} setNewTodo={setNewTodo} newTodo={newTodo} deleteToggle={deleteToggle} editTodos={editTodos}/>
+        <Todo addNewTask={addNewTask} todos={todos} checkToggle={checkToggle} setNewTodo={setNewTodo} newTodo={newTodo} deleteToggle={deleteToggle} editTodos={editTodos} />
         <Checked todos={todos} checkToggle={checkToggle} deleteToggle={deleteToggle} editTodos={editTodos} />
-        <Removed todos={todos} deleteToggle={deleteToggle} editTodos={editTodos}/>
+        <Removed todos={todos} deleteToggle={deleteToggle} editTodos={editTodos} />
       </div>
     </div>
   )

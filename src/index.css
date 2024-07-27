@@ -3,17 +3,7 @@
 @tailwind utilities;
 
 @layer components{
-  .todo-row:nth-child(2n+1) {
-    @apply bg-custom-gradient-1;
-  }
-  
-  .todo-row:nth-child(2n+2) {
-    @apply bg-custom-gradient-2;
-  }
-  
-  .todo-row:nth-child(2n+3) {
-    @apply bg-custom-gradient-3;
-  }
+ 
   
   .todo-row:nth-child(4n+4) {
     @apply bg-gradient-to-tr from-cyan-500 to-teal-400;

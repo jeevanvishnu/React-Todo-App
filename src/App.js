@@ -4,7 +4,7 @@ import './App.css'
 import Todo from './Todo'
 import Removed from './Removed'
 import Checked from './Checked'
-
+import GithubCorner from 'react-github-corner';
 function App() {
   const [todos, setTodos] = useState(() => {
     const savedTodos = localStorage.getItem("todos");
@@ -80,6 +80,8 @@ function App() {
         <Checked todos={todos} checkToggle={checkToggle} deleteToggle={deleteToggle} editTodos={editTodos} />
         <Removed todos={todos} deleteToggle={deleteToggle} editTodos={editTodos} />
       </div>
+
+      <GithubCorner href='https://github.com/jeevanvishnu/React-Todo-App'/>
     </div>
   )
 }
